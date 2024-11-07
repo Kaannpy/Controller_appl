@@ -1,0 +1,108 @@
+
+class yazılımcı():
+    def __init__(self ,isim ,soyisim ,numara ,maas ,diller):
+        self.isim =isim
+        self.soyisim =soyisim
+        self.numara =numara
+        self.maas =maas
+        self.diller =diller
+    def bilgilerigöster(self):
+        print("""
+          yazılımcı objesinin özellikleri
+
+          isim:{}
+          Soyisim:{}
+          Numara:{}
+          Maas:{}
+          Bildigi diller:{}
+
+
+        """.format(self.isim ,self.soyisim ,self.numara ,self.maas,self.diller))
+yazılımcı1 = yazılımcı("KAAN", "PEY", 1731, 650000, ["C", "Java", "Python", "C++"])
+yazılımcı1.bilgilerigöster()
+
+
+
+
+
+
+class calısan():
+    def __init__(self,isim,maas,department):
+        print("Calısan sınıfın init functionu")
+        self.isim=isim
+        self.maas=maas
+        self.department=department
+    def bilgilerigöster(self):
+        print("Calısan sınıfın bilgileri....")
+        print("İsim: {}\nMaas: {}\nDepartment: {}\n".format(self.isim,self.maas,self.department))
+    def department_degistir(self,yeni_department):
+        self.department=yeni_department
+
+
+        class Yönetici(calısan):
+    pass
+
+
+    yönetici1=Yönetici("Kaan Pey",5000,"Bilisim")
+
+
+yönetici1.bilgilerigöster()
+
+yönetici1.department_degistir("insan kaynakları")
+
+yönetici1.bilgilerigöster()
+
+
+
+class Yönetici(calısan):
+    def zam_yap(self,zam_miktari):
+        self.maas+=zam_miktari
+
+
+        yönetici1=Yönetici("Serhat bey",3500,"Pazarlama")
+
+
+
+        yönetici1.zam_yap(500)
+
+
+        yönetici1.bilgilerigöster()
+
+
+override
+class Yönetici(calısan):
+    def __init__(self,isim,maas,department,kisi_sayisi):
+        print("Yönetici  init function initiallizing")
+        self.isim=isim
+        self.maas=maas
+        self.department=department
+        self.kisi_sayisi=kisi_sayisi
+    def bilgilerigöster(self):
+        print("Yönetici sınıfın bilgileri....")
+        print("İsim: {}\nMaas: {}\nDepartment: {}\nKisi sayisi{}".format(self.isim,self.maas,self.department,self.kisi_sayisi))
+
+    def zam_yap(self,zam_miktari):
+        self.maas+=zam_miktari
+
+        yönetici1=Yönetici("Serhat bey",3500,"Pazarlama")
+
+        yönetici1.zam_yap(500)
+        yönetici1.bilgilerigöster()
+
+
+    // kisi sayisi ekledik
+
+        yönetici1=Yönetici("Oguz0",3500,"Bilisim",200)
+
+        yönetici1.bilgilerigöster()
+Yönetici sınıfın bilgileri....
+İsim: Oguz0
+Maas: 3500
+Department: Bilisim
+Kisi sayisi200
+
+
+super methodu
+override edilmis bir methodu aynı zamanda miras aldımız methodu kullanmak istersek kullanılır
+
+
